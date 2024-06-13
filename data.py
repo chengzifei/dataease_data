@@ -111,7 +111,6 @@ def get_data():
         aaamerge_df = merged_df.merge(filtered_df_device, on='device_no')
         aaamerge_df = aaamerge_df.rename(columns={'customer_id_x': 'customer_id'})
         aaamerge_df = aaamerge_df.drop(columns=['device_name', 'customer_id_y'])
-
         json_dict = {column: aaamerge_df[column].tolist() for column in aaamerge_df.columns}
         return json_dict
     except:
