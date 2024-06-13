@@ -113,7 +113,6 @@ def get_data():
         aaamerge_df = aaamerge_df.drop(columns=['device_name', 'customer_id_y'])
 
         json_dict = {column: aaamerge_df[column].tolist() for column in aaamerge_df.columns}
-
         return json_dict
     except:
         return '0'
